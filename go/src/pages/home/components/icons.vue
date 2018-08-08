@@ -94,6 +94,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  @import '~styles/varibles.styl'
+  @import '~styles/mixins.styl'
   .icons >>> .swiper-pagination-bullet-active
     background rgba(0,175,190,.8)
   .icons >>> .swiper-pagination-bullet
@@ -125,4 +127,5 @@ export default {
         font-size 14px
         text-align center
         color $darkTextColor
+        ellipsis()
 </style>
