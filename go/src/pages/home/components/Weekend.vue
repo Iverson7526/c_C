@@ -44,7 +44,6 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/mixins.styl'
 .title
-  margin-top 5px
   line-height 40px
   background #eeeeee
   text-indent 10px

@@ -2,7 +2,9 @@
   <div class="wrapper">
     <swiper :options="swiperOption">
       <!-- slides -->
-      <swiper-slide v-for = "item of swiperList" :key = "item.id"><img class="swiper-img" :src = "item.imgUrl"  alt=""></swiper-slide>
+      <swiper-slide class="swiper-slide" v-for="item of swiperList" :key = "item.id">
+        <img class="swiper-img" :src = "item.imgUrl"  alt="">
+      </swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
@@ -12,6 +14,9 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    swiperList: Array
+  },
   data () {
     return {
       swiperOption: {
@@ -20,19 +25,7 @@ export default {
         },
         loop: true,
         autoplay: true
-      },
-      swiperList: [{
-        id: '001',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1808/3a/48a1c53041cd9602.jpg_750x200_e36210c1.jpg'
-      },
-      {
-        id: '002',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1806/1d/187ca571d2f9d602.jpg_750x200_d163f927.jpg'
-      },
-      {
-        id: '003',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1807/c6/44fce1467be17702.jpg_750x200_406f5fc3.jpg'
-      }]
+      }
     }
   }
 }
@@ -46,12 +39,18 @@ export default {
     height 6px
   .wrapper >>> .swiper-pagination-bullets
     bottom 6px
+  // swiper情况特殊 占位与完整显示 分开完成
+  // 占位由最外层容器完成  图片完整显示由图片节点及其父节点组合完成
+  // 完整显示需求：图片节点 absolute+宽高百分百 && 某个长辈节点 relative+padding-bottom
   .wrapper
     width 100%
     height 0
     overflow hidden
-    padding-bottom 26.66%
-    background #ccc
-    .swiper-img
-      width 100%
+    padding-bottom 27.25%
+    .swiper-slide
+      padding-bottom 27.25%
+      .swiper-img
+        position absolute
+        width 100%
+        height 100%
 </style>
