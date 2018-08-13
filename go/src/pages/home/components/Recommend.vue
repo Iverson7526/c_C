@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'Recommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/7d/7dca9c37a87479eba3.img.jpg_200x200_f62f78bd.jpg',
-        title: '世茂云上厦门观光厅',
-        desc: '体验文化盛宴，尽享东方神韵'
-      }, {
-        id: '002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/7d/7dca9c37a87479eba3.img.jpg_200x200_f62f78bd.jpg',
-        title: '世茂云上厦门观光厅',
-        desc: '体验文化盛宴，尽享东方神韵'
-      }, {
-        id: '003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/7d/7dca9c37a87479eba3.img.jpg_200x200_f62f78bd.jpg',
-        title: '世茂云上厦门观光厅',
-        desc: '体验文化盛宴，尽享东方神韵'
-      }]
-    }
+  props: {
+    recommendList: Array
   }
 }
 </script>

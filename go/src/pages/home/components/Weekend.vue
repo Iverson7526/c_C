@@ -18,25 +18,8 @@
 <script>
 export default {
   name: 'Weekend',
-  data () {
-    return {
-      weekendList: [{
-        id: '001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1711/15/1cdd5ee885686b.jpg_r_640x214_46768064.jpg',
-        title: '世茂云上厦门观光厅',
-        desc: '体验文化盛宴，尽享东方神韵'
-      }, {
-        id: '002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1711/15/1cdd5ee885686b.jpg_r_640x214_46768064.jpg',
-        title: '世茂云上厦门观光厅',
-        desc: '体验文化盛宴，尽享东方神韵'
-      }, {
-        id: '003',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1711/15/1cdd5ee885686b.jpg_r_640x214_46768064.jpg',
-        title: '世茂云上厦门观光厅',
-        desc: '体验文化盛宴，尽享东方神韵'
-      }]
-    }
+  props: {
+    weekendList: Array
   }
 }
 </script>
