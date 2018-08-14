@@ -7,10 +7,12 @@
       <span class="iconfont icon-input">&#xe670;</span>
       输入城市/景点/游玩主题
     </div>
-    <div class="header-right">
-      {{this.city}}
-      <span class="iconfont icon-arrow">&#xe6aa;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{this.city}}
+        <span class="iconfont icon-arrow">&#xe6aa;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -53,6 +55,7 @@ export default {
     float right
     width 62px
     text-align center
+    color #fff
     .icon-arrow
       float right
       margin 0px 5px 0 -10px
